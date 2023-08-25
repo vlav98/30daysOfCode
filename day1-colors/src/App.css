@@ -8,6 +8,10 @@
   width: 100vw;
 }
 
+#hexacolorText {
+  cursor: pointer;
+}
+
 .animate-text {
   font-size: 1.6em;
   animation: pulse 1s;
