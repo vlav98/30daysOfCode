@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Day 1 - Colors
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This mini site generate hexa colours shown in background. You can generate as much colours as you want and copy the hexacode by clicking on it.
+
+The project has been bootstrapped with Create React App.
 
 ## Available Scripts
 
