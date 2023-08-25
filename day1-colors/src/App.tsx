@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
@@ -11,10 +14,25 @@ const App: React.FC = () => {
   const changeHexaColor = () => {
     setHexaColorChanged(getRandomHexaColor());
     setTextColor(getContrastColor(hexaColor));
+    document.getElementById("hexacolorCheck")!.classList.add("hide");
+    document.getElementById("hexacolorText")!.classList.remove("animate-text");
+    document.getElementById("hexacolorText")!.classList.remove("animate-text");
   };
 
   const handleCopyClick = () => {
+    document.getElementById("hexacolorCheck")!.classList.remove("hide");
     navigator.clipboard.writeText(hexaColor);
+    document.getElementById("hexacolorCheck")!.classList.add("animate-text");
+    document.getElementById("hexacolorText")!.classList.add("animate-text");
+
+    setTimeout(function () {
+      document
+        .getElementById("hexacolorText")!
+        .classList.remove("animate-text");
+      document
+        .getElementById("hexacolorText")!
+        .classList.remove("animate-text");
+    }, 1000);
   };
 
   const textColorStyle = {
@@ -33,8 +51,14 @@ const App: React.FC = () => {
           onClick={changeHexaColor}
           color={textColor}
         ></Button>
-        <h2 style={textColorStyle} onClick={handleCopyClick}>
+
+        <h2 id="hexacolorText" style={textColorStyle} onClick={handleCopyClick}>
           {hexaColor}
+          <FontAwesomeIcon
+            id="hexacolorCheck"
+            className="hide"
+            icon={faCheck}
+          />
         </h2>
       </div>
     </div>
