@@ -1,0 +1,13 @@
+{
+  "name": "30daysofcode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vlav98/30daysOfCode.git",
+  "author": "Valentine Lav <valentinelav98@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "workspaces": [
+    "day1-colors",
+    "day2"
+  ]
+}
