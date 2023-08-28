@@ -8,6 +8,6 @@
   "private": false,
   "workspaces": [
     "day1-colors",
-    "day2"
+    "day2-gradient"
   ]
 }

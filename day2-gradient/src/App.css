@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#linearGradientText {
+  cursor: pointer;
+}
+
+.animate-text {
+  font-size: 1.6em;
+  animation: pulse 1s;
+}
+
+div > Button {
+  margin: 1em;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
